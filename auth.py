@@ -5,6 +5,7 @@ from oauth2client import file, client, tools
 # Setup the Drive v3 API
 SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly'
 store = file.Storage('credentials.json')
+# creds = store.get()
 creds = store.get()
 if not creds or creds.invalid:
     flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
